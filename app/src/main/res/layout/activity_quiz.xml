@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".QuizActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/score_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            android:text="Score: 0"
+            android:textColor="@color/colorGrey1"
+            android:textSize="16dp"
+            tools:text="Score: 5" />
+
+        <TextView
+            android:id="@+id/question_count_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/score_text_view"
+            android:freezesText="true"
+            android:text="Question: 1/x"
+            android:textColor="@color/colorGrey1"
+            android:textSize="16dp"
+            tools:text="Question: 7/10" />
+
+        <TextView
+            android:id="@+id/category_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_count_text_view"
+            android:freezesText="true"
+            android:text="Category: "
+            android:textColor="@color/colorGrey1"
+            android:textSize="16dp"
+            tools:text="Category: Geography" />
+
+        <TextView
+            android:id="@+id/difficulty_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category_text_view"
+            android:freezesText="true"
+            android:text="Difficulty: "
+            android:textColor="@color/colorGrey1"
+            android:textSize="16dp"
+            tools:text="Difficulty: Medium" />
+
+        <TextView
+            android:id="@+id/countdown_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:freezesText="true"
+            android:text="00:30"
+            android:textColor="@color/colorGrey2"
+            android:textSize="36sp"
+            tools:text="00:12" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/countdown_text_view"
+        android:layout_weight="2"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="Answer 1 is Correct"
+        android:textColor="@color/colorBlack"
+        android:textSize="22sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RadioButton
+            android:id="@+id/radio_option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:freezesText="true"
+            android:minHeight="45dp"
+            android:text="Option1"
+            android:textColor="@color/colorGrey1"
+            android:textSize="18sp"
+            tools:checked="true"
+            tools:text="A"
+            tools:textColor="@color/colorGreen" />
+
+        <RadioButton
+            android:id="@+id/radio_option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:freezesText="true"
+            android:minHeight="45dp"
+            android:text="Option2"
+            android:textColor="@color/colorGrey1"
+            android:textSize="18sp"
+            tools:text="B"
+            tools:textColor="@color/colorRed" />
+
+        <RadioButton
+            android:id="@+id/radio_option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:freezesText="true"
+            android:minHeight="45dp"
+            android:text="Option3"
+            android:textColor="@color/colorGrey1"
+            android:textSize="18sp"
+            tools:text="C"
+            tools:textColor="@color/colorRed" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:text="Confirm"
+            android:textColor="@color/colorWhite"
+            tools:text="Next" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
